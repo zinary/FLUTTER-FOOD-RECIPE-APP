@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import './screens/tab_screen.dart';
 import './screens/meal_detail_screen.dart';
 import './screens/selected_category_meal_screen.dart';
-import './screens/catagories_screen.dart';
+// import './screens/catagories_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
           bodyText2: TextStyle(color: Colors.grey[800],fontFamily: 'ProductSans',fontSize: 20,fontWeight: FontWeight.normal),
         )
       ),
-      home: Home(),
+      home: TabScreen(),
       routes: {
        SelectedCategoryMealScreen.routeName: (ctx) => SelectedCategoryMealScreen(),
        MealDetailScreen.routeName : (ctx) => MealDetailScreen(),
@@ -32,29 +33,3 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class Home extends StatefulWidget {
-  @override
-  _HomeState createState() => _HomeState();
-}
-
-class _HomeState extends State<Home> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        elevation: 0,
-        
-        centerTitle: true,
-        // backgroundColor: Colors.red,
-        title: Text(
-        
-          'Meals',
-          style: Theme.of(context).textTheme.headline6,
-        ),
-        titleSpacing: 5,
-      ),
-      body: CatagoriesScreen(),
-      // floatingActionButton: FloatingActionButton(onPressed: null),
-    );
-  }
-}
