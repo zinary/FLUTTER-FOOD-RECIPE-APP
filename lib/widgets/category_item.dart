@@ -24,12 +24,9 @@ class CategoryItem extends StatelessWidget {
       onTap: () => selectedMeal(context),
       child: Container(
         child: Center(
-          child: Hero(
-            tag: title,
-            child: Text(
-              title,
-              style: Theme.of(context).textTheme.headline5,
-            ),
+          child: Text(
+            title,
+            style: Theme.of(context).textTheme.headline5,
           ),
         ),
         decoration: BoxDecoration(
